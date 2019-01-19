@@ -11,17 +11,17 @@ myImage.onclick = function() {
 
 // Personalized welcome message code
 var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
+var myHeading = document.querySelector('h2');
 function setUserName() {
 var myName = prompt('Please enter your name.');
 localStorage.setItem('name', myName);
-myHeading.textContent = 'Welcome!, ' + myName;
+myHeading.textContent = 'Welcome, ' + myName + ' To the Carpenter Cabin Home Page';
 }
 if(!localStorage.getItem('name')) {
 setUserName();
 } else {
 var storedName = localStorage.getItem('name');
-myHeading.textContent = 'Welcome Back! ' + storedName;
+myHeading.textContent = 'Welcome Back! ' + storedName + ' To the Home Page!';
 }
 myButton.onclick = function() {
 setUserName();
